@@ -1,0 +1,655 @@
+@charset "UTF-8";
+
+/* 폰트 프리텐다드 */
+/* font-family: 'Pretendard'; */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.left_box {
+    float: left;
+}
+
+.right_box {
+    float: right;
+}
+
+body {
+    min-width: 1450px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #635145;
+    font-family: 'Pretendard';
+}
+
+/* header */
+header {
+    background: url(../images/header_background_shadow.png) no-repeat top center;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*포지션 fixed와 포지션 absolute는(랠러티브는 이런현상이 없습니다!)
+  div와 같은 블락요소들이 가진 특징인 한줄 전체를 차지하는 속성이 사라지고, 안에 들어있는 내용중 가장 긴것 기준으로 길이를 설정하게 됩니다. 그래서 포지션을 준 대상이 한줄 전체를 차지하게 할려면 width:100%를 같이 설정해야한다.
+  */
+    z-index: 50;
+}
+
+/* top */
+
+.top_inner {
+    width: 1320px;
+    margin: 0 auto;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.login>li {
+    float: left;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.sns>li {
+    float: left;
+    padding-left: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#top .face {
+    padding-left: 11px;
+}
+
+#top .you {
+    padding-left: 11px;
+}
+
+/* header_inner */
+.header_inner {
+    position: relative;
+    margin: 0 auto;
+    width: 1320px;
+    height: 106px;
+    text-align: center;
+}
+
+#gnb {
+    width: 100%;
+}
+
+#gnb>li {
+    float: left;
+    padding: 30px 0;
+    width: 20%;
+    font-weight: bold;
+    letter-spacing: 3px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#gnb>li>a {
+    display: inline-block;
+    text-align: center;
+}
+
+.header_inner .logospace,
+.sub .logospace {
+    margin-left: 264px;
+}
+
+.logo {
+    width: 134px;
+    height: 91px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo img {
+    width: 100%;
+}
+
+.sub {
+    position: absolute;
+    top: 100%;
+    /*포지션의 기준이 된 gnb>li높이 바로 밑으로 간다.*/
+    left: 0px;
+    width: 100%;
+    /*포지션 앱솔루트 사용으로, sub가 가진 한줄 전체를 차지하는 속성이 사라져서 다시 지정해줌.*/
+}
+
+.sub {
+    background-color: #e1899e;
+    border: 1px solid #d33b5f;
+    border-top: none;
+    width: 1320px;
+    margin: 0 auto;
+    border-radius: 0 0 50px 50px;
+}
+
+.sub>ul {
+    float: left;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    width: 264px;
+}
+
+.sub>ul>li {
+    padding: 10px 0;
+}
+
+.sub {
+    display: none;
+    /*sub가 html에 존재하지 않는것처럼 사라지게 해줌.*/
+}
+
+/* #gnb>li:hover .sub {
+    display: block;
+    -제이쿼리로 서브메뉴를 슬라이드 할 때에는 보이게 하는 부분을 css로 하면 안된다!
+    sub전체를 display:none으로 안보이게 하는곳 까지 css로 처리한다. ]*/
+
+/* main_banner */
+#main_banner {
+    margin: 130px 0;
+    text-align: center;
+}
+
+.main_1 {
+    width: 100%;
+    height: 800px;
+}
+
+.mySwiper_1>.swiper-button-next,
+.mySwiper_1>.swiper-button-prev {
+    color: #fff;
+}
+
+.mySwiper_1>.swiper-pagination>span {
+    background-color: #fff;
+}
+
+
+/* container1 */
+.our_menu {
+    width: 1320px;
+    margin: 280px auto;
+    margin-bottom: 80px;
+}
+
+.our_menu>h1 {
+    text-align: center;
+    margin-bottom: 85px;
+    color: #e34d61;
+}
+
+.menu_list li {
+    float: left;
+    margin: 0 52.5px;
+    width: 225px;
+    height: 260px;
+}
+
+.menu_list li a {
+    display: inline-block;
+    width: 225px;
+    height: 260px;
+    border-radius: 112.5px 112.5px 10px 10px;
+    overflow: hidden;
+}
+
+.sub_b_1 {
+    width: 100%;
+    height: 450px;
+    background: url(../images/sub_banner_1_blossom.jpg) no-repeat top center;
+}
+
+.sub_button {
+    position: absolute;
+    top: 350px;
+    left: 436px;
+}
+
+.blossom {
+    text-align: center;
+    position: absolute;
+    top: 85px;
+    right: 259px;
+    width: 290px;
+    height: 300px;
+}
+
+#container1 .sub_b_1 .blossom .blossom_box .blossom_page {
+    bottom: -3px;
+}
+
+.blossom_box {
+    border-radius: 100px 100px 0 0;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.mySwiper_2>.swiper-button-next,
+.mySwiper_2>.swiper-button-prev {
+    color: #fff;
+}
+
+.mySwiper_2>.swiper-pagination>span {
+    background-color: #fff;
+}
+
+.margin_box {
+    width: 1320px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* container_2 */
+#container_2 {
+    text-align: center;
+    margin: 280px 0;
+}
+
+.margin_box_2 {
+    width: 1800px;
+    margin: 80px auto;
+}
+
+.mySwiper_3>.swiper-button-next,
+.mySwiper_3>.swiper-button-prev {
+    color: #635145;
+}
+
+#container_2>h1 {
+    color: #3e725b;
+}
+
+#container_1,
+#container_2,
+#container_3 {
+    overflow: hidden;
+}
+
+.sub_b_2 {
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+
+}
+
+.sub_b_2 a {
+    display: inline-block;
+    width: 100%;
+}
+
+/* container_3 */
+.con3_inner {
+    margin: 0 auto;
+    width: 1530px;
+    height: 800px;
+    background: url(../images/background_brand_border.png) no-repeat center center;
+    color: #3a3633;
+    padding-top: 74px;
+    box-sizing: border-box;
+}
+
+.con3_box1,
+.con3_box2 {
+    width: 690px;
+    height: 680px;
+}
+
+.con3_inner h1 {
+    font-size: 40px;
+}
+
+.con3_inner p {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.con3_inner a {
+    display: inline-block;
+    height: 48px;
+}
+
+.con3_box1>h1 {
+    padding-top: 30px;
+    padding-bottom: 24px;
+}
+
+.con3_box1>p {
+    padding-bottom: 24px;
+}
+
+.con3_box2>p {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.con3_box2>a {
+    margin-bottom: 24px;
+}
+
+.con3_inner .bold {
+    font-weight: bold;
+}
+
+
+/* container_4 */
+#container_4 {
+    text-align: center;
+}
+
+.sub_b_4 {
+    width: 1320px;
+    margin: 285px auto;
+}
+
+.sub_b_4>h1 {
+    margin-bottom: 80px;
+}
+
+.mySwiper_4 {
+    width: 100%;
+    height: 700px;
+}
+
+.mySwiper_4>img {
+    width: 100%;
+}
+
+.mySwiper_5 {
+    height: 100px;
+}
+
+.mySwiper_5 .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#container_4 .mySwiper_5 .swiper-slide {
+    opacity: 0.4;
+}
+
+#container_4 .mySwiper_5 .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+/* container_5 */
+#container_5 {
+    text-align: center;
+}
+
+#container_5>h1 {
+    color: #3a4679;
+    margin: 80px;
+}
+
+#slide {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide_inner {
+    display: flex;
+    width: 200%;
+    animation: rotate 10s linear infinite;
+}
+
+.slide_inner ul {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.slide_inner ul li {
+    max-width: 300px;
+}
+
+.slide_inner ul li img {
+    width: 100%;
+}
+
+@keyframes rotate {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -100%;
+    }
+}
+
+.slide_inner:hover {
+    animation-play-state: paused
+}
+
+.slide_inner ul li a img:hover {
+    scale: 0.8;
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    height: 265px;
+    margin-top: 180px;
+    text-align: center;
+    background: url(../images/footer_background.png) no-repeat top center;
+    font-weight: 500;
+}
+
+.footer_inner {
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.footer_logo img {
+    width: 135px;
+    height: 69px;
+    margin-bottom: 30px;
+}
+
+.footer_inner p {
+    padding: 5px;
+}
+
+
+/* hover */
+.under {
+    display: block;
+    /*인라인요소인 span태그는 block으로 바꿔주지 않으면 길이, 높이가 먹히지 않습니다.*/
+    width: 0%;
+    height: 3px;
+    background-color: #635145;
+    /*선 길이 및 높이, 색상 설정*/
+}
+
+#gnb>li:hover {
+    color: #bf9a85;
+}
+
+#gnb>li {
+    transition: all 0.2s;
+}
+
+#gnb>li:hover .under {
+    width: 100%;
+
+}
+
+#gnb>li .under {
+    transition: all 0.2s;
+}
+
+#gnb .sub>ul>li:hover {
+    color: #635145;
+    font-weight: bold;
+}
+
+#gnb .sub>ul>li {
+    transition: all 0.2s;
+}
+
+.logo img:hover {
+    transform: rotate(-5deg);
+    transition: all 0.2s;
+}
+
+.logo img {
+    transition: all 0.2s;
+}
+
+.footer_logo img {
+    transition: all 0.2s;
+}
+
+.footer_logo img:hover {
+    transform: rotate(5deg);
+    transition: all 0.2s;
+}
+
+/* our_menu hover */
+
+.our_hover {
+    width: 225px;
+    height: 260px;
+}
+
+.our_hover1 {
+    background: url(../images/menu/menu_1.jpg) no-repeat top center;
+}
+
+.menu_list li a:hover .our_hover1 {
+    background: url(../images/menu/menu1_hover.jpg) no-repeat top center;
+}
+
+.our_hover2 {
+    background: url(../images/menu/menu_2.jpg) no-repeat top center;
+}
+
+.menu_list li a:hover .our_hover2 {
+    background: url(../images/menu/menu2_hover.jpg) no-repeat top center;
+    transition: all 0.5s;
+}
+
+.our_hover_text2 {
+    background: url(../images/menu/menu_text2.png) no-repeat bottom center;
+    width: 225px;
+    height: 260px;
+}
+
+.menu_list li a:hover .our_hover_text2 {
+    background: url(../images/menu/menu_hover_text2.png) no-repeat top center;
+}
+
+.our_hover3 {
+    background: url(../images/menu/menu_3.jpg) no-repeat top center;
+}
+
+.menu_list li a:hover .our_hover3 {
+    background: url(../images/menu/menu3_hover.jpg) no-repeat top center;
+}
+
+.our_hover4 {
+    background: url(../images/menu/menu_4.jpg) no-repeat top center;
+}
+
+.menu_list li a:hover .our_hover4 {
+    background: url(../images/menu/menu4_hover.jpg) no-repeat top center;
+    transition: all 0.5s;
+}
+
+.our_hover_text4 {
+    background: url(../images/menu/menu_text4.png) no-repeat bottom center;
+    width: 225px;
+    height: 260px;
+}
+
+.menu_list li a:hover .our_hover_text4 {
+    background: url(../images/menu/menu_hover_text4.png) no-repeat top center;
+}
+
+.best_box {
+    background: url(../images/menu/best_box.jpg) no-repeat top center;
+    width: 251px;
+    height: 261px;
+    border-radius: 30px;
+    overflow: hidden;
+    font-size: 22px;
+    font-family: 'BRBA_B';
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+
+.best_box p {
+    padding-top: 18px;
+}
+
+.best_box:hover p {
+    font-size: 24px;
+}
+
+.best_bg:hover {
+    transform: rotate(-7deg);
+}
+
+.best_bg {
+    width: 251px;
+    height: 261px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+.best1 {
+    background: url(../images/menu/best_1.png) no-repeat center center;
+}
+
+.best2 {
+    background: url(../images/menu/best_2.png) no-repeat center center;
+}
+
+.best3 {
+    background: url(../images/menu/best_3.png) no-repeat center center;
+}
+
+.best4 {
+    background: url(../images/menu/best_4.png) no-repeat center center;
+}
+
+.best5 {
+    background: url(../images/menu/best_5.png) no-repeat center center;
+}

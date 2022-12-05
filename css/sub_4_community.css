@@ -1,0 +1,470 @@
+@charset "UTF-8";
+
+/* 폰트 프리텐다드 */
+/* font-family: 'Pretendard'; */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.left_box {
+    float: left;
+}
+
+.right_box {
+    float: right;
+}
+
+body {
+    min-width: 1450px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #635145;
+    font-family: 'Pretendard';
+}
+
+/* header */
+header {
+    background: url(../images/header_background_shadow.png) no-repeat top center;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*포지션 fixed와 포지션 absolute는(랠러티브는 이런현상이 없습니다!)
+  div와 같은 블락요소들이 가진 특징인 한줄 전체를 차지하는 속성이 사라지고, 안에 들어있는 내용중 가장 긴것 기준으로 길이를 설정하게 됩니다. 그래서 포지션을 준 대상이 한줄 전체를 차지하게 할려면 width:100%를 같이 설정해야한다.
+  */
+    z-index: 50;
+}
+
+/* top */
+
+.top_inner {
+    width: 1320px;
+    margin: 0 auto;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.login>li {
+    float: left;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.sns>li {
+    float: left;
+    padding-left: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#top .face {
+    padding-left: 11px;
+}
+
+#top .you {
+    padding-left: 11px;
+}
+
+/* header_inner */
+.header_inner {
+    position: relative;
+    margin: 0 auto;
+    width: 1320px;
+    height: 106px;
+    text-align: center;
+}
+
+#gnb {
+    width: 100%;
+}
+
+#gnb>li {
+    float: left;
+    padding: 30px 0;
+    width: 20%;
+    font-weight: bold;
+    letter-spacing: 3px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#gnb>li>a {
+    display: inline-block;
+    text-align: center;
+}
+
+.header_inner .logospace,
+.sub .logospace {
+    margin-left: 264px;
+}
+
+.logo {
+    width: 134px;
+    height: 91px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo img {
+    width: 100%;
+}
+
+.sub {
+    position: absolute;
+    top: 100%;
+    /*포지션의 기준이 된 gnb>li높이 바로 밑으로 간다.*/
+    left: 0px;
+    width: 100%;
+    /*포지션 앱솔루트 사용으로, sub가 가진 한줄 전체를 차지하는 속성이 사라져서 다시 지정해줌.*/
+}
+
+.sub {
+    background-color: #e1899e;
+    border: 1px solid #d33b5f;
+    border-top: none;
+    width: 1320px;
+    margin: 0 auto;
+    border-radius: 0 0 50px 50px;
+}
+
+.sub>ul {
+    float: left;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    width: 264px;
+}
+
+.sub>ul>li {
+    padding: 10px 0;
+}
+
+.sub {
+    display: none;
+    /*sub가 html에 존재하지 않는것처럼 사라지게 해줌.*/
+}
+
+/* #gnb>li:hover .sub {
+    display: block;
+    -제이쿼리로 서브메뉴를 슬라이드 할 때에는 보이게 하는 부분을 css로 하면 안된다!
+    sub전체를 display:none으로 안보이게 하는곳 까지 css로 처리한다. ]*/
+
+/* container_1 */
+#container_1 {
+    margin: 0 auto;
+    margin-top: 130px;
+    position: relative;
+}
+
+.tab_box {
+    width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 170px;
+    padding-top: 300px;
+}
+
+.tab_position {
+    position: absolute;
+    width: 1320px;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tab_position>h1 {
+    font-size: 20px;
+    padding-bottom: 7px;
+    border-bottom: 3px solid #ede7dd;
+}
+
+.tabs>li {
+    float: left;
+    z-index: 35;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tabs>li:nth-child(2) {
+    margin: 0 100px;
+}
+
+.tabs>li>a {
+    display: inline-block;
+    padding: 14px 0;
+    width: 220px;
+    height: 53px;
+    font-size: 25px;
+    font-weight: 800;
+    border-radius: 27px;
+    box-sizing: border-box;
+    background-color: #ede7dd;
+    letter-spacing: 5px;
+}
+
+#wrapper .active a {
+    background-color: #f7dce0;
+}
+
+.tabs {
+    width: 860px;
+    margin: 74px auto;
+}
+
+#tab1 table {
+    width: 1320px;
+    border-collapse: collapse;
+}
+
+.tab_notice th {
+    background-color: #fde8eb;
+    font-size: 20px;
+    padding: 16px 0;
+    border-top: 2px solid #bf9a85;
+}
+
+.tab_notice td {
+    font-size: 16px;
+    padding: 16px 0;
+    border-top: 1px solid #ede7dd;
+    border-bottom: 1px solid #ede7dd;
+    text-align: center;
+}
+
+#tab1 .nt {
+    text-align: left;
+}
+
+.nt>a:hover {
+    font-weight: bold;
+    border-bottom: solid 2px #635145;
+}
+
+.faq_title_in:hover {
+    font-weight: bold;
+}
+
+.notice_page ul li {
+    float: left;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: #ede7dd;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+.notice_page ul li:nth-child(2) {
+    margin: 0 20px;
+}
+
+.notice_page {
+    width: 130px;
+    margin: 0 auto;
+    margin-top: 75px;
+}
+
+/* faq */
+
+/*제목부분*/
+.faq_title {
+    overflow: hidden;
+    padding: 10px 10px;
+    border-bottom: 1px solid #cfae9c;
+    cursor: pointer;
+}
+
+.faq_border {
+    border-top: 2px solid #bf9a85;
+}
+
+.faq_title_in {
+    float: left;
+}
+
+.faq_arrow {
+    float: right;
+    margin-right: 10px;
+}
+
+.faq_info {
+    padding: 40px 10px;
+    background: #fde8eb;
+    display: none;
+    border-bottom: 1px solid #cfae9c;
+    cursor: pointer;
+}
+
+/*+모양 회전관련 속성. 요부분은 반드시 복사해서 가져가세요~*/
+.turn .faq_title img {
+    transform: rotate(180deg);
+}
+
+.turn .faq_title {
+    border-bottom: none;
+}
+
+/* tab3 */
+#tab3 {
+    margin-top: 40px;
+}
+
+.map_position {
+    position: relative;
+}
+
+.map_info {
+    position: absolute;
+    right: -1500px;
+    top: 70px;
+    opacity: 0;
+}
+
+.active .map_info {
+    position: absolute;
+    right: -300px;
+    top: 70px;
+    opacity: 1;
+    z-index: 30;
+    transition: all 1s;
+}
+
+.hidden_box {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+#footer {
+    width: 100%;
+    height: 265px;
+    margin-top: 180px;
+    text-align: center;
+    background: url(../images/footer_background.png) no-repeat top center;
+    font-weight: 500;
+}
+
+.footer_inner {
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.footer_logo img {
+    width: 135px;
+    height: 69px;
+    margin-bottom: 30px;
+}
+
+.footer_inner p {
+    padding: 5px;
+}
+
+
+/* hover */
+.under {
+    display: block;
+    /*인라인요소인 span태그는 block으로 바꿔주지 않으면 길이, 높이가 먹히지 않습니다.*/
+    width: 0%;
+    height: 3px;
+    background-color: #635145;
+    /*선 길이 및 높이, 색상 설정*/
+}
+
+#gnb>li:hover {
+    color: #bf9a85;
+}
+
+#gnb>li {
+    transition: all 0.2s;
+}
+
+#gnb>li:hover .under {
+    width: 100%;
+
+}
+
+#gnb>li .under {
+    transition: all 0.2s;
+}
+
+#gnb .sub>ul>li:hover {
+    color: #635145;
+    font-weight: bold;
+}
+
+#gnb .sub>ul>li {
+    transition: all 0.2s;
+}
+
+.logo img:hover {
+    transform: rotate(-5deg);
+    transition: all 0.2s;
+}
+
+.logo img {
+    transition: all 0.2s;
+}
+
+.footer_logo img {
+    transition: all 0.2s;
+}
+
+.footer_logo img:hover {
+    transform: rotate(5deg);
+    transition: all 0.2s;
+}

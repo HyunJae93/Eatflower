@@ -1,0 +1,594 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'BRBA_B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/BRBA_B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 폰트 프리텐다드 */
+/* font-family: 'Pretendard'; */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.left_box {
+    float: left;
+}
+
+.right_box {
+    float: right;
+}
+
+body {
+    min-width: 1450px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #635145;
+    font-family: 'Pretendard';
+}
+
+/* header */
+header {
+    background: url(../images/header_background_shadow.png) no-repeat top center;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*포지션 fixed와 포지션 absolute는(랠러티브는 이런현상이 없습니다!)
+  div와 같은 블락요소들이 가진 특징인 한줄 전체를 차지하는 속성이 사라지고, 안에 들어있는 내용중 가장 긴것 기준으로 길이를 설정하게 됩니다. 그래서 포지션을 준 대상이 한줄 전체를 차지하게 할려면 width:100%를 같이 설정해야한다.
+  */
+    z-index: 50;
+}
+
+/* top */
+
+.top_inner {
+    width: 1320px;
+    margin: 0 auto;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.login>li {
+    float: left;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.sns>li {
+    float: left;
+    padding-left: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#top .face {
+    padding-left: 11px;
+}
+
+#top .you {
+    padding-left: 11px;
+}
+
+/* header_inner */
+.header_inner {
+    position: relative;
+    margin: 0 auto;
+    width: 1320px;
+    height: 106px;
+    text-align: center;
+}
+
+#gnb {
+    width: 100%;
+}
+
+#gnb>li {
+    float: left;
+    padding: 30px 0;
+    width: 20%;
+    font-weight: bold;
+    letter-spacing: 3px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#gnb>li>a {
+    display: inline-block;
+    text-align: center;
+}
+
+.header_inner .logospace,
+.sub .logospace {
+    margin-left: 264px;
+}
+
+.logo {
+    width: 134px;
+    height: 91px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo img {
+    width: 100%;
+}
+
+.sub {
+    position: absolute;
+    top: 100%;
+    /*포지션의 기준이 된 gnb>li높이 바로 밑으로 간다.*/
+    left: 0px;
+    width: 100%;
+    /*포지션 앱솔루트 사용으로, sub가 가진 한줄 전체를 차지하는 속성이 사라져서 다시 지정해줌.*/
+}
+
+.sub {
+    background-color: #e1899e;
+    border: 1px solid #d33b5f;
+    border-top: none;
+    width: 1320px;
+    margin: 0 auto;
+    border-radius: 0 0 50px 50px;
+}
+
+.sub>ul {
+    float: left;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    width: 264px;
+}
+
+.sub>ul>li {
+    padding: 10px 0;
+}
+
+.sub {
+    display: none;
+    /*sub가 html에 존재하지 않는것처럼 사라지게 해줌.*/
+}
+
+/* #gnb>li:hover .sub {
+    display: block;
+    -제이쿼리로 서브메뉴를 슬라이드 할 때에는 보이게 하는 부분을 css로 하면 안된다!
+    sub전체를 display:none으로 안보이게 하는곳 까지 css로 처리한다. ]*/
+
+
+/* container_1 */
+
+#container_1 {
+    width: 100%;
+    position: relative;
+}
+
+.mtab_box {
+    padding-top: 130px;
+    height: 1500px;
+}
+
+.mtab_position {
+    position: absolute;
+    width: 1320px;
+    top: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mtabs>li {
+    float: left;
+    z-index: 35;
+    text-align: center;
+    margin: 0 55.5px;
+}
+
+.mtabs>li>a {
+    display: inline-block;
+    padding: 14px 0;
+    width: 219px;
+    height: 52px;
+    font-size: 25px;
+    font-weight: 800;
+    border-radius: 27px;
+    box-sizing: border-box;
+    background-color: #ede7dd;
+    letter-spacing: 5px;
+}
+
+.menu_margin {
+    width: 1320px;
+    margin: 0 auto;
+    margin-top: 170px;
+}
+
+.menu_margin ul li {
+    float: left;
+    background: url(../images/menu/menu_box.png) no-repeat top center;
+    background-size: 100%;
+    width: 278px;
+    height: 355px;
+    border-radius: 30px;
+    margin-right: 69px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 25px;
+    font-family: 'BRBA_B';
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+}
+
+.newhot {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 46px;
+    height: 30px;
+}
+
+.menu_margin ul li a {
+    display: inline-block;
+    width: 278px;
+    height: 355px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.menu_margin ul li .pr {
+    padding-left: 45px;
+}
+
+.menu_dessert ul li p {
+    padding: 31px 0;
+}
+
+.menu_drink ul li p {
+    padding: 25px 0;
+}
+
+.menu_package ul li p {
+    padding: 25px 0;
+}
+
+.menu_goods ul li p {
+    padding: 25px 0;
+}
+
+.menu_margin ul .margin_x {
+    margin-right: 0;
+}
+
+.mprice {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+#mwrapper .active a {
+    background-color: #f7dce0;
+}
+
+/* 메뉴_백그라운드 */
+.mbgbox {
+    width: 100%;
+    height: 320px;
+}
+
+.bgbox_dessert {
+    background: url(../images/menu/bg_dessert.gif) no-repeat top center;
+}
+
+.bgbox_drink {
+    background: url(../images/menu/bg_drink.gif) no-repeat top center;
+}
+
+.bgbox_package {
+    background: url(../images/menu/bg_package.gif) no-repeat top center;
+}
+
+.bgbox_goods {
+    background: url(../images/menu/bg_goods.gif) no-repeat top center;
+}
+
+/* 메뉴 호버 */
+
+.menu_dessert ul li img {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 205px;
+}
+
+.menu_margin ul li a:hover {
+    font-size: 30px;
+}
+
+.menu_bg:hover {
+    transform: rotate(-7deg);
+}
+
+.menu_bg {
+    width: 278px;
+    height: 355px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    height: 265px;
+    margin-top: 180px;
+    text-align: center;
+    background: url(../images/footer_background.png) no-repeat top center;
+    font-weight: 500;
+}
+
+.footer_inner {
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.footer_logo img {
+    width: 135px;
+    height: 69px;
+    margin-bottom: 30px;
+}
+
+.footer_inner p {
+    padding: 5px;
+}
+
+
+/* hover */
+.under {
+    display: block;
+    /*인라인요소인 span태그는 block으로 바꿔주지 않으면 길이, 높이가 먹히지 않습니다.*/
+    width: 0%;
+    height: 3px;
+    background-color: #635145;
+    /*선 길이 및 높이, 색상 설정*/
+}
+
+#gnb>li:hover {
+    color: #bf9a85;
+}
+
+#gnb>li {
+    transition: all 0.2s;
+}
+
+#gnb>li:hover .under {
+    width: 100%;
+
+}
+
+#gnb>li .under {
+    transition: all 0.2s;
+}
+
+#gnb .sub>ul>li:hover {
+    color: #635145;
+    font-weight: bold;
+}
+
+#gnb .sub>ul>li {
+    transition: all 0.2s;
+}
+
+.logo img:hover {
+    transform: rotate(-5deg);
+    transition: all 0.2s;
+}
+
+.logo img {
+    transition: all 0.2s;
+}
+
+.footer_logo img {
+    transition: all 0.2s;
+}
+
+.footer_logo img:hover {
+    transform: rotate(5deg);
+    transition: all 0.2s;
+}
+
+/* 메뉴bg모음 */
+
+.menu1 {
+    background: url(../images/menu/dessert/1.png) no-repeat center center;
+}
+
+.menu2 {
+    background: url(../images/menu/dessert/2.png) no-repeat center center;
+}
+
+.menu3 {
+    background: url(../images/menu/dessert/3.png) no-repeat center center;
+}
+
+.menu4 {
+    background: url(../images/menu/dessert/4.png) no-repeat center center;
+}
+
+.menu5 {
+    background: url(../images/menu/dessert/5.png) no-repeat center center;
+}
+
+.menu6 {
+    background: url(../images/menu/dessert/6.png) no-repeat center center;
+}
+
+.menu7 {
+    background: url(../images/menu/dessert/7.png) no-repeat center center;
+}
+
+.menu8 {
+    background: url(../images/menu/dessert/8.png) no-repeat center center;
+}
+
+.menu_dr1 {
+    background: url(../images/menu/drink/1.png) no-repeat center center;
+}
+
+.menu_dr2 {
+    background: url(../images/menu/drink/2.png) no-repeat center center;
+}
+
+.menu_dr3 {
+    background: url(../images/menu/drink/3.png) no-repeat center center;
+}
+
+.menu_dr4 {
+    background: url(../images/menu/drink/4.png) no-repeat center center;
+}
+
+.menu_dr5 {
+    background: url(../images/menu/drink/5.png) no-repeat center center;
+}
+
+.menu_dr6 {
+    background: url(../images/menu/drink/6.png) no-repeat center center;
+}
+
+.menu_dr7 {
+    background: url(../images/menu/drink/7.png) no-repeat center center;
+}
+
+.menu_gd1 {
+    background: url(../images/menu/goods/1.png) no-repeat center center;
+}
+
+.menu_gd2 {
+    background: url(../images/menu/goods/2.png) no-repeat center center;
+}
+
+.menu_gd3 {
+    background: url(../images/menu/goods/3.png) no-repeat center center;
+}
+
+.menu_gd4 {
+    background: url(../images/menu/goods/4.png) no-repeat center center;
+}
+
+.menu_gd5 {
+    background: url(../images/menu/goods/5.png) no-repeat center center;
+}
+
+.menu_gd6 {
+    background: url(../images/menu/goods/6.png) no-repeat center center;
+}
+
+.menu_gd7 {
+    background: url(../images/menu/goods/7.png) no-repeat center center;
+}
+
+.menu_gd8 {
+    background: url(../images/menu/goods/8.png) no-repeat center center;
+}
+
+.menu_pk1 {
+    background: url(../images/menu/package/1.png) no-repeat center center;
+}
+
+.menu_pk2 {
+    background: url(../images/menu/package/2.png) no-repeat center center;
+}
+
+.menu_pk3 {
+    background: url(../images/menu/package/3.png) no-repeat center center;
+}
+
+.menu_pk4 {
+    background: url(../images/menu/package/4.png) no-repeat center center;
+}
+
+.menu_pk5 {
+    background: url(../images/menu/package/5.png) no-repeat center center;
+}
+
+.menu_pk6 {
+    background: url(../images/menu/package/6.png) no-repeat center center;
+}
+
+/* 뉴핫 백그라운드 */
+
+.new {
+    background: url(../images/menu/new.png) no-repeat center center;
+}
+
+.hot {
+    background: url(../images/menu/hot.png) no-repeat center center;
+}
+
+/* 팝업 */
+
+/* 팝업창 css */
+.mpopup {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 60;
+    display: none;
+    /* 팝업창 모양이 완벽히 끝나고 나면 display:none 속성으로 처음에 안보이게까지만 css로 설정한다. */
+}
+
+.mpopup_box img {
+    width: 600px;
+    height: 800px;
+}
+
+.mpopup_box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+.mclose {
+    font-size: 50px;
+    color: #635145;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
