@@ -140,28 +140,34 @@ header {
     top: 100%;
     /*포지션의 기준이 된 gnb>li높이 바로 밑으로 간다.*/
     left: 0px;
-    width: 100%;
+    width: 1320px;
+    margin: 0 auto;
     /*포지션 앱솔루트 사용으로, sub가 가진 한줄 전체를 차지하는 속성이 사라져서 다시 지정해줌.*/
 }
 
-.sub {
+.sub_img {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sub_inner {
     background-color: #e1899e;
     border: 1px solid #d33b5f;
     border-top: none;
-    width: 1320px;
-    margin: 0 auto;
     border-radius: 0 0 50px 50px;
 }
 
-.sub>ul {
+.sub_inner>ul {
     float: left;
     color: #fff;
     padding-top: 30px;
     padding-bottom: 20px;
-    width: 264px;
+    width: 263px;
 }
 
-.sub>ul>li {
+.sub_inner>ul>li {
     padding: 10px 0;
 }
 
@@ -460,29 +466,12 @@ header {
     /*선 길이 및 높이, 색상 설정*/
 }
 
-#gnb>li:hover {
-    color: #bf9a85;
-}
-
-#gnb>li {
-    transition: all 0.2s;
-}
-
-#gnb>li:hover .under {
-    width: 100%;
-
-}
-
-#gnb>li .under {
-    transition: all 0.2s;
-}
-
-#gnb .sub>ul>li:hover {
+#gnb .sub ul li:hover {
     color: #635145;
-    font-weight: bold;
+    font-weight: 900;
 }
 
-#gnb .sub>ul>li {
+#gnb .sub ul li {
     transition: all 0.2s;
 }
 
