@@ -646,3 +646,25 @@ header {
 .best6 {
     background: url(../images/menu/best_6.png) no-repeat center center;
 }
+
+/* 미디어쿼리 */
+
+@media (max-width:1529px) {
+    .con3_inner {
+        margin: 0 auto;
+        width: 1420px;
+        height: 800px;
+        box-sizing: border-box;
+    }
+
+    .con3_box1 img,
+    .con3_box2 img {
+        width: 100%;
+    }
+
+    .con3_box1,
+    .con3_box2 {
+        width: 640px;
+        height: 680px;
+    }
+}
