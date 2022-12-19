@@ -305,6 +305,20 @@ header {
     background-color: #f7dce0;
 }
 
+#mwrapper .active .bg2 {
+    background-color: #c2ded0;
+}
+
+#mwrapper .active .bg3 {
+    background-color: #cadafe;
+}
+
+#mwrapper .active .bg4 {
+    background-color: #bf9a85;
+    color: #fff;
+}
+
+
 /* 메뉴_백그라운드 */
 .mbgbox {
     width: 100%;
